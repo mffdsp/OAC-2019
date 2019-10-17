@@ -26,5 +26,26 @@ EXIT:
 
 
 
+MAIN:
+
+addi $s0, $zero, 5
+addi $s2, $zero, 0
+addi $s3, $zero, 1
+addi
+add $s3, $s3, $s2
+addi $s1, $s3, 0
+addi $s0, $s0, -2
+FIB:
+   beq $s0, $zero, EXIT
+   addi $s1, $s3, 0
+    add $s3, $s3, $s2
+   addi $s2, $s1, 0
+   addi $s0, $s0, -1
+   jal FIB
+EXIT:   
+   addi $s5, $s3, 0
+
+
+
 
    
